@@ -1,46 +1,25 @@
-public class Toy {
-
+abstract class Toy {
     private int id;
+    private int weight;
     private String name;
-    private int quantity; // TODO а надо ли?
-    private double weight; // TODO вес = шанс выпадения?
 
-    public Toy(int id, String name, int quantity, double weight) {
+    public Toy(int id, int weight, String name) {
         this.id = id;
-        this.name = name;
-        this.quantity = quantity;
         this.weight = weight;
+        this.name = name;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+    public abstract String getToyType();
 }
