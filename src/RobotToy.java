@@ -5,6 +5,6 @@ class RobotToy extends Toy {
 
     @Override
     public String getToyType() {
-        return "robot";
+        return "робот";
     }
 }

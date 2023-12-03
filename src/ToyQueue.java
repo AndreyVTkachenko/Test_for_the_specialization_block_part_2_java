@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
@@ -12,25 +13,25 @@ public class ToyQueue {
         ToyShop robotToyShop = new RobotToyShop();
         ToyShop dollToyShop = new DollToyShop();
 
-        toyQueue.add(сonstructorToyShop.createToy(1, 2, "constructor"));
-        toyQueue.add(robotToyShop.createToy(2, 2, "robot"));
-        toyQueue.add(dollToyShop.createToy(3, 6, "doll"));
+        toyQueue.add(сonstructorToyShop.createToy(1, 2, "конструктор"));
+        toyQueue.add(robotToyShop.createToy(2, 2, "робот"));
+        toyQueue.add(dollToyShop.createToy(3, 6, "кукла"));
 
         Random random = new Random();
         try {
             FileWriter writer = new FileWriter("C:\\Users\\gepat\\Documents\\Обучение в GeekBrains" +
-                    "\\КР по блоку специализация\\a_toy_shop\\src\\result.txt");
+                    "\\КР по блоку специализация\\a_toy_shop\\src\\result.txt", StandardCharsets.UTF_8);
             for (int i = 0; i < 10; i++) {
                 int randomValue = random.nextInt(10) + 1;
                 Toy toy;
                 if (randomValue <= 2) {
-                    toy = сonstructorToyShop.createToy(1, 2, "constructor");
+                    toy = сonstructorToyShop.createToy(1, 2, "конструктор");
                 } else if (randomValue <= 4) {
-                    toy = robotToyShop.createToy(2, 2, "robot");
+                    toy = robotToyShop.createToy(2, 2, "робот");
                 } else {
-                    toy = dollToyShop.createToy(3, 6, "doll");
+                    toy = dollToyShop.createToy(3, 6, "кукла");
                 }
-                String result = "ID: " + toy.getId() + ", Weight: " + toy.getWeight() + ", Name: " + toy.getName();
+                String result = "ID: " + toy.getId() + ", Weight: " + toy.getWeight() + ", Name: " + toy.getName() + "\n";
                 writer.write(result);
             }
             writer.close();
