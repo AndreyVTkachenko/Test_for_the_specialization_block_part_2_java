@@ -1,3 +1,11 @@
+package view;
+
+import model.Toy;
+import presenter.ConstructorToyShop;
+import presenter.DollToyShop;
+import presenter.RobotToyShop;
+import presenter.ToyShop;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

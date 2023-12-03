@@ -1,4 +1,6 @@
-class DollToy extends Toy {
+package model;
+
+public class DollToy extends Toy {
     public DollToy(int id, int weight, String name) {
         super(id, weight, name);
     }

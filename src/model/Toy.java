@@ -1,4 +1,6 @@
-abstract class Toy {
+package model;
+
+public abstract class Toy {
     private int id;
     private int weight;
     private String name;

@@ -1,4 +1,6 @@
-class ConstructorToy extends Toy {
+package model;
+
+public class ConstructorToy extends Toy {
     public ConstructorToy(int id, int weight, String name) {
         super(id, weight, name);
     }
